@@ -1,4 +1,5 @@
 +++
-title = "About Syna"
-date = "2017-10-05"
+url = "/about"
+title = "About KMMD"
+date = "2020-02-07"
 +++

@@ -1,0 +1,57 @@
+{{- $fragment := .self.Params -}}
+{{- $name := strings.TrimSuffix ".md" (replace .self.Name "/index.md" "") -}}
+{{- $bg := $fragment.background | default "secondary" }}
+<section id="{{ $name }}">
+  <div class="overlay container-fluid
+    {{- printf " bg-%s" $bg -}}
+  ">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col text-center
+        {{- if eq $bg "dark" -}}
+          {{- printf " text-%s" "light" -}}
+        {{- else -}}
+          {{- printf " text-%s" "dark" -}}
+        {{- end -}}
+      ">
+        <h1>Expected Client Results</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center
+        {{- if eq $bg "dark" -}}
+          {{- printf " text-%s" "light" -}}
+        {{- else -}}
+          {{- printf " text-%s" "dark" -}}
+        {{- end -}}
+      ">
+        <!-- <h5><a href="https://www.acme.com">ACME Materials Manufacturing</a></h5> -->
+        <p>A constant review and refinement of every process has lead to
+            steady improvement in product quality. KMMD provided the experience
+            and insights necessary to streamline our data analysis, reducing
+            turnaround time and improving production efficiency.
+            <!-- -<a href="mailto:nancy_drew@acme.com">Nancy Drew</a> -->
+            </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center
+        {{- if eq $bg "dark" -}}
+          {{- printf " text-%s" "light" -}}
+        {{- else -}}
+          {{- printf " text-%s" "dark" -}}
+        {{- end -}}
+      ">
+        <!-- <h5><a href="https://www.basics.org">BASICS Technical Data Solutions</a></h5> -->
+        <p>Complex data problems need cutting edge informatics, but domain
+            experts provide the context and experience to take the next step.
+            KMMD was able to improve communication between the data scientists
+            and our subject matter experts, helping to put the right information
+            into the right hands across our organization, improving
+            productivity and accelerating our research and development efforts.
+            <!-- -<a href="mailto:john_kemeny@basics.org">John Kemeny</a> -->
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
